@@ -1,0 +1,9 @@
+{
+    "dev": {
+      "driver": "pg",
+      "user": "textsdb",
+      "host": "textsdb",
+      "database": "textsdb",
+      "password": "textsdb"
+    }
+  }
