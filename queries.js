@@ -9,6 +9,7 @@ const pool = new Pool({
 
 
 const getText = (request, response) => {
+    console.log(`Reading from database...`)
     pool.query('SELECT * FROM texts ORDER BY random() LIMIT 1', (error, results) => {
         //        pool.query('SELECT 99 as id, "HARD-CODED" as pictureText FROM texts LIMIT 1', (error, results) => {
         if (error) {
