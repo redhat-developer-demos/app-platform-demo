@@ -9,8 +9,8 @@ const pool = new Pool({
 
 
 const getText = (request, response) => {
-//    pool.query('SELECT * FROM texts ORDER BY random() LIMIT 1', (error, results) => {
-        pool.query('SELECT 99, "HARD-CODED" FROM texts ORDER BY random() LIMIT 1', (error, results) => {
+    pool.query('SELECT * FROM texts ORDER BY random() LIMIT 1', (error, results) => {
+//        pool.query('SELECT 99, "HARD-CODED" FROM texts ORDER BY random() LIMIT 1', (error, results) => {
             if (error) {
             throw error
         }
