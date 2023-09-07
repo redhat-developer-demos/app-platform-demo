@@ -12,6 +12,6 @@ spec:
     targetPort: 8080
   selector:
     app: getpicturetext
-    deployment: getpicturetext
+    deploymentconfig: getpicturetext
   sessionAffinity: None
   type: ClusterIP
