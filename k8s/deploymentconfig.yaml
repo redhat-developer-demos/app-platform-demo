@@ -1,0 +1,32 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: getpicturetext
+  labels:
+    app: getpicturetext
+spec:
+  selector:
+    app: getpicturetext
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: getpicturetext
+    spec:
+      containers:
+        - name: getpicturetext
+          image: image-registry.openshift-image-registry.svc:5000/rhn-engineering-dsch-dev/getpicturetext:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+  triggers:
+  - type: ConfigChange 
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - getpicturetext
+      from:
+        kind: ImageStreamTag
+        name: getpicturetext:latest
+    type: ImageChange

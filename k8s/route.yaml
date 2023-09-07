@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: getpicturetext
+  name: getpicturetext
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: getpicturetext
+    weight: 100
