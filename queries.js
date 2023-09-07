@@ -10,8 +10,10 @@ const pool = new Pool({
 
 const getText = (request, response) => {
     console.log(`Reading from database...`)
+    var hardCodedResults = 'SELECT * FROM (VALUES ("hard-coded-msg", 99)) AS t(pictureText, id);'
+
     //pool.query('SELECT * FROM texts ORDER BY random() LIMIT 1', (error, results) => {
-                pool.query('SELECT 99 as id, "HARD CODED" as pictureText', (error, results) => {
+    pool.query(hardCodedResults, (error, results) => {
         if (error) {
             throw error
         }
