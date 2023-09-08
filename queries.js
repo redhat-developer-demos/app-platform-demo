@@ -12,8 +12,8 @@ const getText = (request, response) => {
     console.log(`Reading from database...`)
     var hardCodedResults = "SELECT id,pictureText FROM (VALUES ('hard-coded-msg', 99)) AS texts(pictureText, id);"
 
-    //pool.query('SELECT * FROM texts ORDER BY random() LIMIT 1', (error, results) => {
-    pool.query(hardCodedResults, (error, results) => {
+    pool.query('SELECT * FROM texts ORDER BY random() LIMIT 1', (error, results) => {
+    //pool.query(hardCodedResults, (error, results) => {
         if (error) {
             throw error
         }
