@@ -5,4 +5,4 @@ This repo aims to demonstrate capabilities of Red Hat OpenShift as a complete ap
 - `getPitctureText` - A Node.js service that interacts with a PostgreSQL database
 - `textsdb` - PostgreSQL Database
 - `pictureThisApi` - Go based API Gateway that interacts with the frontend
-- `pictureThis` - WebAssembly 
+- `pictureThis` - FrontEnd, written in Blazoe(WASM)
